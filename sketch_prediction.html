@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketch Predicition Project</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="other-container">
+    <header>
+      <h1>Sketch Predicition Neural Network</h1>
+      <br>
+      <a style="color: #f39912;" href="https://github.com/HarrisonBounds/MSAI-349-Final-Project" target="_blank" class="button-link">GitHub</a>
+
+      <!-- Back to Homepage Button -->
+      <a href="index.html" class="back-button">Back to Homepage</a>
+    </header>
+
+    <br>
+    <section>
+        <h2 style="color: #000000;">Overview</h2>
+        <div class="other-video-container">
+            <video class="other-square-video" autoplay muted loop width="400" height="300">
+                <source src="imgs/sketch_predictor_portfolio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <p style="text-align:center; font-style:italic; color:gray;">User-Drawn Sketches</p>
+          <br>
+      <p>
+        This Sketch Prediciton Neural Network takes in a user-inputted sketch drawn in a sketchpad gui, and tries to recognize it. We used a Convolutional
+        Neural Network to extract features from the images, and PyTorch to train the model. PyGame was the platform that created the pipeline for the drawn
+        images.
+    </section>
+
+    <section>
+        <h2 style="color: #000000;">Dataset</h2>
+        <div class="processed-image"> <img src="imgs/sketch_dataset.png" alt="Sketch Dataset" style="width:100%; max-width:500px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Sample Images</p> </div>
+        <br>
+        <p>
+          The dataset utilized for this project is called the <a href="https://paperswithcode.com/dataset/sketch" target="_blank"> Sketch Dataset</a>.It contains <b>20,000 images</b> spanning across <b>250 classes</b>. Each class has 
+          <b>80 images</b> assigned to it, making this dataset perfectly balanced. Each image is <b>1111x1111 pixels</b>, all in grayscale (black and white).
+      </p>
+      </section>
+
+    <section>
+      <h2 style="color: #000000;">Architecture</h2>
+      <div class="hardware-image"> <img src="imgs/sketch_predictor_architecture.png" alt="Architecture" style="width:100%; max-width:600px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Model Architecture</p> </div>
+      <br>
+      <p>
+        The final architecture contained three Convolutional Layers, where each layer had a 5x5 kernel window, 2x2 stride, and a padding of 2. Between each
+        Convolutional layer, batch normalization was performed to act as a regularizer. Each of these layers, including the output were also pooled
+        to reduce dimesionality. The output of these layers were flattened and fed into the fully connected layer, which contained 250 output neurons, 
+        (The same size as our number of classes). A dropout of 50% was used here to reduce overfitting and provide generalization. 
+    </p>
+    </section>
+
+    <section>
+        <h2 style="color: #000000;">Training</h2>
+        <!-- <div class="april-tag"> <img src="imgs/doodle-droid_april_tag.png" alt="April Tag" style="width:100%; max-width:300px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">April Tag</p> </div> -->
+        <br>
+        <p>
+          The training process began by resizing the images to 120x120, to make them easier to work with. Along with this transformation, we also converted the 
+          images to tensors so they could be valid inputs into the neural network. Our training/validation split was 85% and 15% respectively, while our test
+          images were coming from the user input. From here, the training images are passed through the network, appending the loss to a txt file each time for 
+          debugging purposes. The losses are also appended to a list for easy access to evaluation metrics. The same is done for the validation images. 
+      </p>
+      </section>
+
+      <section>
+        <h2 style="color: #000000;">Hyperparameters</h2>
+        <!-- <div class="april-tag"> <img src="imgs/doodle-droid_april_tag.png" alt="April Tag" style="width:100%; max-width:300px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">April Tag</p> </div> -->
+        <br>
+        <p>
+            <ul>
+                <li><b>Loss Function:</b> Multi-Class Cross Entropy</li>
+                <li><b>Epochs:</b> 20</li>
+                <li><b>Batch Size:</b> 64</li>
+                <li><b>Learning Rate:</b> 0.001</li>
+                <li><b>Learning Rate Scheduler:</b> Every 5 epochs decrease lr by a factor of 0.1</li>
+                <li><b>Activation Function:</b> ReLU</li>
+            </ul>
+        </p>
+      </section>
+
+    <section>
+      <h2 style="color: #000000;">Results</h2>
+      <div class="image-container">
+        <div class="route-image">
+          <img src="imgs/sketch_predictor_results.png" alt="Results" style="width:100%; max-width:300px; display:block; margin:auto;">
+          <p style="text-align:center; font-style:italic; color:gray;"></p>
+        </div>
+        <!-- New image beside the Route Planner image -->
+        <div class="extra-image">
+          <img src="imgs/CNN-20epochs-0.001lr: accuracy: 0.5510833333333334, precision: 0.5522304000411243: 2024-12-10 17:34:22.png" alt="Second Image" style="width:100%; max-width:300px; display:block; margin:auto;">
+          <p style="text-align:center; font-style:italic; color:gray;"></p>
+        </div>
+      </div>
+      <br>
+      <p>
+        The results above boast a <b>55% accuracy</b> and a <b>55% precision</b> on the validation set. The user inputter image is then given to the network at the end of the
+        evaluation and the <b>top K classes</b> are predicted for the drawn image. Our team is proud of the results, considering the sparsity of the dataset, being
+        only 80 images per class. As you can see in the results above, there was overfitting in our model which we couldn't break past. We attempted <b>data
+        augmentation</b> and several combinations of hyperparameters. 
+      </p>
+    </section>
+
+    <!-- Contributors Section -->
+    <section id="contributors">
+      <h2 style="color: #000000;">Contributors</h2>
+      <ul>
+        <li><a href="https://github.com/andrewkwolek" target="_blank">Andrew Kwolek</a></li>
+        <li><a href="https://github.com/Sharwin24 " target="_blank">Sharwin Patil</a></li>
+        <li><a href="https://github.com/Sayantani-Bhattacharya" target="_blank">Sayantani Bhattacharya</a><li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
