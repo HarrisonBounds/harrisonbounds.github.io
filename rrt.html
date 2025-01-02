@@ -26,69 +26,72 @@
                 Your browser does not support the video tag.
             </video>
           </div>
-          <p style="text-align:center; font-style:italic; color:gray;">Notes AI demo</p>
+          <p style="text-align:center; font-style:italic; color:gray;">RRT in 2D and 3D</p>
           <br>
       <p>
-        Notes AI is an application written in Python that can listen to audio, transcribe it into text using OpenAI's whisper model, and summarize
-        that transcription using Llama. To get access to Llama, you need to have an api key, which is free on Groq (this will be discussed below).
-        The purpose of this project is to give students in classroom's better learning experiences by digesting the material instead of scrambling to 
-        take notes in real time. 
+        Rapidly-exploring Random Tree (RRT) is an algorithm commonly used in robotics and path planning to efficiently explore high-dimensional spaces.
+        Its primary goal is to find a feasible path from a start point to a goal point while avoiding obstacles. In this project, I programmed RRT in 2d
+        and 3D with collision detection. 
     </section>
 
     <section>
-        <h2 style="color: #000000;">Recording</h2>
+        <h2 style="color: #000000;">How it Works</h2>
         <!-- <div class="frame-image"> <img src="imgs/final_project_drawing(1).png" alt="Frames" style="width:100%; max-width:300px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Frames</p> </div> -->
-        <br>
         <p>
-         Recording audio is acheived by using Python's sound device library. This accesses the host machine's microphone and allows for easy interaction
-         with audio devices. This real time audio input/output operation allows for a lightweight and flexible way to record and save audio. The audio is 
-         recorded in chunks to allow for stopping the recording at anytime. After the audio is processed as a numpy array, it is saved to a .wav file, then to a 
-         .mp3 file to be used later on in the transcription process.
+            RRT incrementally builds a tree by randomly sampling points in the search space and connecting them to the nearest point in the tree, 
+            ensuring that the expansion is biased towards unexplored areas. As the dimensions increase, RRT becomes mopre computationally expensive, making
+            it difficult to efficiently plan paths in higher dimensions.
       </p>
       </section>
 
+    <br>
+
     <section>
-        <h2 style="color: #000000;">Transcribing Audio to Text</h2>
+        <h2 style="color: #000000;">Collision detection</h2>
+        <div class="equation-image"> <img src="imgs/collision_detection.gif" alt="Youbot" style="width:100%; max-width:300px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Detecting collision with circles and lines</p> </div>
+        <p>
+            The collision detection in this RRT implementation checks if a proposed tree segment between two points intersects any circular obstacles. 
+            For each obstacle, it calculates the distances from the segment’s endpoints to the obstacle's center and determines the closest point on the segment
+            to the center using a parameter u.
+            <br>
+            <br>
+            <b>u = (c<sub>x</sub> - a<sub>x</sub>)(b<sub>x</sub> - a<sub>x</sub>) + (c<sub>y</sub> - a<sub>y</sub>)(b<sub>y</sub> - a<sub>y</sub>)] / [(b<sub>x</sub> - a<sub>x</sub>)<sup>2</sup> + (b<sub>y</sub> - a<sub>y</sub>)<sup>2</sup></b>
+            <br>
+            <br>
+        
+            If u is within [0, 1], the closest point lies on the segment; otherwise, it is outside the segment. 
+            The method then checks if the distance from the closest point to the obstacle's center is less than the obstacle’s radius, indicating a collision.
+            Additionally, it verifies if either endpoint is inside the obstacle. If a collision is detected, the method stops and returns True; 
+            otherwise, it continues checking other obstacles. This logic ensures that no segment intersects any obstacle or the goal without detection.
+
+      </p>
+      </section>
+
+      <br>
+
+      <section>
+        <h2 style="color: #000000;">Shortest Path</h2>
         <!-- <div class="equation-image"> <img src="imgs/EL_equation.png" alt="Youbot" style="width:100%; max-width:300px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Euler-Lagrange Equation</p> </div> -->
         <p>
-            After the audio is recorded and in the .mp3 format, OpenAI's Whisper model uses Artificial Intelligence to transcribe the audio into text. 
-            Simply specify the model, which in our case is <b>whisper-large-v3</b>, then read the file using this model. This will output a json format
-            of text, which is then saved into a text file to later view the transcription.
+            If the new node reaches or enters the goal's radius without collisions, the algorithm traces the path back from the goal to the start node
+            using the parent-child relationship stored in a dictionary. The result is a sequence of connected nodes forming a feasible path, 
+            approximating the shortest route within the constraints of the step size and random sampling. The algorithm visualizes the tree and path 
+            dynamically as it progresses.
 
       </p>
       </section>
     
     <br>
     <section>
-      <h2 style="color: #000000;">Summarizing the Transcription</h2>
+      <h2 style="color: #000000;">RRT in 3 dimensions</h2>
       <!-- <div class="hardware-image"> <img src="imgs/sketch_predictor_architecture.png" alt="Architecture" style="width:100%; max-width:600px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Model Architecture</p> </div> -->
       <p>
-        To use a large language model to summarize the transcription created above, we first need an API key. Llama's api key can be created 
-        <a href="https://console.groq.com/docs/quickstart" target=""_blank>here</a>. Once created, after cloning the repository, the key needs to be 
-        exported so the code recognizes it. To achieve this, you can run <b>export YOUR_API_KEY_HERE</b>. The model is specified in the code as 
-        <b>llama3-8b-8192</b>, and the summarization comes from the content passed into the language model (along with the transcribed text), which reads
-        <b>Please summarize the following text into a concise and organized notes format suitable for studying</b>. After all of this initial setup, the text
-        is moved to another text file (in markdown format) in a similar way that the transcribed audio is. 
+        The 3D RRT implementation differs from earlier 2D versions by extending the RRT algorithm into a three-dimensional space, where nodes, 
+        obstacles, and goals are represented in (x, y, z) coordinates instead of (x, y). This requires changes to several functions: 
+        distance calculations now use 3D Euclidean formulas, obstacles are modeled as spheres instead of circles, and collision detection accounts 
+        for the shortest distance between a line segment and the center of a sphere. 
         
     </p>
     </section>
-    
-    <br>
-    <section>
-        <h2 style="color: #000000;">GUI</h2>
-        <!-- <div class="other-video-container">
-            <video class="other-square-video" autoplay muted loop width="400" height="300">
-                <source src="imgs/Dynamics_HW7_simulation.webm" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-          </div>
-          <p style="text-align:center; font-style:italic; color:gray;">Other Animations</p>
-          <br> -->
-        
-      </section>
-      <p>
-        The GUI is not ideal for this project, and the future goal is to make this a website, where any user can retireve an api key and use this application
-        in their own browser. In this way, the project is still in progress, but core funcitonality is fully operational.
-    </p>
 
       
