@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Path Planning</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="other-container">
+    <header>
+      <h1>Path Planning using RRT</h1>
+      <br>
+      <a style="color: #f39912;" href="https://github.com/HarrisonBounds/RRT-" target="_blank" class="button-link">GitHub</a>
+
+      <!-- Back to Homepage Button -->
+      <a href="index.html" class="back-button">Back to Homepage</a>
+    </header>
+
+    <br>
+    <section>
+        <h2 style="color: #000000;">Overview</h2>
+        <div class="other-video-container">
+            <video class="other-square-video" autoplay muted loop width="400" height="300">
+                <source src="imgs/rrt_portfolio_new.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <p style="text-align:center; font-style:italic; color:gray;">Notes AI demo</p>
+          <br>
+      <p>
+        Notes AI is an application written in Python that can listen to audio, transcribe it into text using OpenAI's whisper model, and summarize
+        that transcription using Llama. To get access to Llama, you need to have an api key, which is free on Groq (this will be discussed below).
+        The purpose of this project is to give students in classroom's better learning experiences by digesting the material instead of scrambling to 
+        take notes in real time. 
+    </section>
+
+    <section>
+        <h2 style="color: #000000;">Recording</h2>
+        <!-- <div class="frame-image"> <img src="imgs/final_project_drawing(1).png" alt="Frames" style="width:100%; max-width:300px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Frames</p> </div> -->
+        <br>
+        <p>
+         Recording audio is acheived by using Python's sound device library. This accesses the host machine's microphone and allows for easy interaction
+         with audio devices. This real time audio input/output operation allows for a lightweight and flexible way to record and save audio. The audio is 
+         recorded in chunks to allow for stopping the recording at anytime. After the audio is processed as a numpy array, it is saved to a .wav file, then to a 
+         .mp3 file to be used later on in the transcription process.
+      </p>
+      </section>
+
+    <section>
+        <h2 style="color: #000000;">Transcribing Audio to Text</h2>
+        <!-- <div class="equation-image"> <img src="imgs/EL_equation.png" alt="Youbot" style="width:100%; max-width:300px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Euler-Lagrange Equation</p> </div> -->
+        <p>
+            After the audio is recorded and in the .mp3 format, OpenAI's Whisper model uses Artificial Intelligence to transcribe the audio into text. 
+            Simply specify the model, which in our case is <b>whisper-large-v3</b>, then read the file using this model. This will output a json format
+            of text, which is then saved into a text file to later view the transcription.
+
+      </p>
+      </section>
+    
+    <br>
+    <section>
+      <h2 style="color: #000000;">Summarizing the Transcription</h2>
+      <!-- <div class="hardware-image"> <img src="imgs/sketch_predictor_architecture.png" alt="Architecture" style="width:100%; max-width:600px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Model Architecture</p> </div> -->
+      <p>
+        To use a large language model to summarize the transcription created above, we first need an API key. Llama's api key can be created 
+        <a href="https://console.groq.com/docs/quickstart" target=""_blank>here</a>. Once created, after cloning the repository, the key needs to be 
+        exported so the code recognizes it. To achieve this, you can run <b>export YOUR_API_KEY_HERE</b>. The model is specified in the code as 
+        <b>llama3-8b-8192</b>, and the summarization comes from the content passed into the language model (along with the transcribed text), which reads
+        <b>Please summarize the following text into a concise and organized notes format suitable for studying</b>. After all of this initial setup, the text
+        is moved to another text file (in markdown format) in a similar way that the transcribed audio is. 
+        
+    </p>
+    </section>
+    
+    <br>
+    <section>
+        <h2 style="color: #000000;">GUI</h2>
+        <!-- <div class="other-video-container">
+            <video class="other-square-video" autoplay muted loop width="400" height="300">
+                <source src="imgs/Dynamics_HW7_simulation.webm" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <p style="text-align:center; font-style:italic; color:gray;">Other Animations</p>
+          <br> -->
+        
+      </section>
+      <p>
+        The GUI is not ideal for this project, and the future goal is to make this a website, where any user can retireve an api key and use this application
+        in their own browser. In this way, the project is still in progress, but core funcitonality is fully operational.
+    </p>
+
+      
