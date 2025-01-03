@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pen Thief Robot</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="other-container">
+    <header>
+      <h1>Pen Thief Robot</h1>
+      <br>
+      <a style="color: #f39912;" href="https://github.com/HarrisonBounds/Pen_Grabber" target="_blank" class="button-link">GitHub</a>
+
+      <!-- Back to Homepage Button -->
+      <a href="index.html" class="back-button">Back to Homepage</a>
+    </header>
+
+    <br>
+    <section>
+        <h2 style="color: #000000;">Overview</h2>
+        <div class="other-video-container">
+            <video class="other-square-video" autoplay muted loop width="400" height="300">
+                <source src="imgs/pen_grabber_portfolio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <p style="text-align:center; font-style:italic; color:gray;">Overview</p>
+          <br>
+      <p>
+        This project combines computer vision, robotics, and sensor integration to create a system capable of detecting, aligning, and interacting 
+        with objects in a 3D environment. Utilizing Intel RealSense cameras for depth and RGB data, the system implements color-based masking, 
+        adaptive thresholding, and contour detection to identify objects of interest. The 3D coordinates of these objects are calculated from pixel 
+        data, enabling precise spatial localization. A robotic arm, controlled through the Interbotix Manipulator library, is programmed to execute 
+        various motions such as reaching, grasping, and positional adjustments.
+    </section>
+
+    <section>
+        <h2 style="color: #000000;">Hardware</h2>
+        <div class="image-container">
+            <div class="route-image">
+              <img src="imgs/pincher.png" alt="Results" style="width:100%; max-width:500px; display:block; margin:auto;">
+              <p style="text-align:center; font-style:italic; color:gray;">Interbotix PincherX-100 Arm</p>
+            </div>
+            <div class="extra-image">
+              <img src="imgs/realsense.jpg" alt="Second Image" style="width:100%; max-width:150px; display:block; margin:auto;">
+              <p style="text-align:center; font-style:italic; color:gray;">RealSense D455 Depth Camera</p>
+            </div>
+          </div>        <p>
+            The PincherX-100 robot arm is a compact, versatile robotic manipulator designed for precision tasks, featuring four degrees of freedom 
+            and a gripper capable of executing intricate pick-and-place operations. In this project, the arm is utilized for object manipulation, 
+            leveraging its accuracy and ease of programming through the Interbotix Manipulator library. Complementing this is the Intel RealSense 
+            D455 depth camera, which provides high-resolution depth and RGB data for 3D perception. With its extended range and precise depth 
+            sensing, the D455 enables accurate object detection and spatial localization, forming the backbone of the vision system that guides 
+            the PincherX-100 in real-world interaction scenarios.
+      </p>
+      </section>
+
+    <br>
+
+    <section>
+        <h2 style="color: #000000;">Pen Detection</h2>
+        <div class="other-video-container">
+            <video class="other-square-video" autoplay muted loop width="400" height="300">
+                <source src="imgs/pen_detection.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <p style="text-align:center; font-style:italic; color:gray;">Pen Detection using OpenCV</p>        
+          <p>
+            The system utilizes <b>OpenCV</b> to process live video input from the RealSense D455 depth camera. By converting the image to the HSV color
+            space, specific color ranges for the pen are isolated using a mask, allowing for robust color-based segmentation. Contour detection is 
+            then applied to identify the pen's shape, enabling precise localization within the frame. Once the contour is detected, an average of the 
+            contour points is taken to get the center of the pen, which is represented with a red dot in OpenCV.
+
+      </p>
+      </section>
+
+      <br>
+
+      <section>
+        <h2 style="color: #000000;">Converting 2D Points to 3D Space</h2>
+        <!-- <div class="equation-image"> <img src="imgs/EL_equation.png" alt="Youbot" style="width:100%; max-width:300px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Euler-Lagrange Equation</p> </div> -->
+        <p>
+            After detecting the pen's contour in the 2D image frame, the centroid of the contour is computed to represent the pen's location in 
+            pixel coordinates (u, v). The depth value corresponding to this pixel is retrieved from the depth image, which provides the distance 
+            of the pen from the camera in meters. These values are then passed through the camera's intrinsic parameters to transform the 2D pixel 
+            coordinates and depth into real-world 3D coordinates (x, y, z) in the camera's coordinate system. These 3D coordinates are subsequently 
+            transformed into the robot's reference frame, enabling the PincherX-100 arm to accurately interact with the pen in physical space.
+
+      </p>
+      </section>
+
+      <section>
+        <h2 style="color: #000000;">Controlling the Arm</h2>
+        <!-- <div class="equation-image"> <img src="imgs/EL_equation.png" alt="Youbot" style="width:100%; max-width:300px; display:block; margin:auto;"> <p style="text-align:center; font-style:italic; color:gray;">Euler-Lagrange Equation</p> </div> -->
+        <p>
+            Once the 3D space representation of the pen is determined, the PincherX-100 robot arm is controlled using the InterbotixManipulatorXS API 
+            to interact with the pen. The arm can be directed to specific positions in the 3D workspace by setting the end-effector's pose through 
+            the set_ee_pose_components method, which takes the calculated (x, y, z) coordinates. For fine-grained control, individual joints can be 
+            adjusted using the set_single_joint_position method, while multiple joints can be coordinated via the set_joint_positions method.
+            <br>
+            <br>
+            The robot also features predefined poses, such as home and sleep positions, for initialization and standby states. Additional commands allow 
+            the gripper to grasp or release objects and enable movement in specific directions like forward, backward, up, or down. This modular 
+            control framework ensures precise and flexible manipulation of the arm based on real-world spatial data.
+
+      </p>
+      </section>
+
+    
+
+      
