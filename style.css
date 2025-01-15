@@ -209,7 +209,7 @@ a:hover {
   grid-auto-rows: auto;
   gap: 50px 50px; /* 30px for vertical spacing, 40px for horizontal spacing */
   justify-content: center; /* Center the grid horizontally */
-  align-items: center; /* Center items vertically within their row */
+  align-items: start; /* Center items vertically within their row */
   width: fit-content; /* Only take up as much space as needed for content */
   margin: 0 auto; /* Center the grid container within the page */
 }
@@ -297,15 +297,24 @@ a:hover {
   cursor: pointer;
 }
 
-.video-container {
-  width: 450px; /* Same width as square-image-container */
+/* .video-container {
+  width: 450px; 
   border-radius: 10px;
   border: 5px solid #eeedea;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden; /* Ensures the video stays within the rounded borders */
+  overflow: hidden; 
+} */
+
+.video-container video {
+  border: none; /* Removes the border */
+  height: 100%;
+  align-items: flex-start; 
+  width: 400px; /* Ensures portrait orientation */
+  height: 400px;
+  object-fit: cover; /* Ensures the video fills the space without distortion */
 }
 
 .square-video {
