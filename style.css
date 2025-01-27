@@ -312,8 +312,8 @@ a:hover {
   border: none; /* Removes the border */
   height: 100%;
   align-items: flex-start; 
-  width: 400px; /* Ensures portrait orientation */
-  height: 400px;
+  width: 500px; /* Ensures portrait orientation */
+  height: 500px;
   object-fit: cover; /* Ensures the video fills the space without distortion */
 }
 
