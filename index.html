@@ -1,183 +1,140 @@
-<html lang="en"><head></head>
-    <title>Harrison Bounds</title>
-    <meta name="description" content="Harrison Bounds, MS Robotics Student at Northwestern University">
-    <meta charset="utf-8">
-   
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Favicon/theme -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harrison's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Load fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Neue+Montreal&family=Rhymes&display=swap" rel="stylesheet">
+</head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-  </head>
-
-  <body>
+<body>
+  <!-- Header -->
+  <header class="header">
     <div class="container">
-      <div class="header-section">
-        <div class="header-frame">
-          <h1>Harrison Bounds</h1>
-          <h2>MS Robotics Student at Northwestern University</h2>
+      <div class="name">Harrison Bounds</div>
+      <nav class="menu">
+        <div class="dropdown">
+          <button class="menu-item dropdown-btn">Projects</button>
+          <div class="dropdown-content">
+            <a href="#" data-filter="featured-project">All Projects</a>
+            <a href="#" data-filter="cv">Computer Vision</a>
+            <a href="#" data-filter="machine-learning">Machine Learning</a>
+            <a href="#" data-filter="navigation">Navigation</a>
+            <a href="#" data-filter="manipulation">Manipulation</a>
+            <a href="#" data-filter="ros">ROS</a>
+          </div>
         </div>
-        <div class="img-frame">
-          <img id="propic" src="imgs/DALL·E 2024-10-11 11.54.35 - A close-up profile picture of a futuristic humanoid robot hand. The hand is metallic with articulated joints, showcasing its dexterous and advanced de.webp" alt="">
-        </div>
+        <a href="resume/HarrisonBoundsResume.pdf" class="menu-item">Resume</a>
+        <a href="https://github.com/HarrisonBounds" class="menu-item">GitHub</a>
+        <a href="https://www.linkedin.com/in/harrison-bounds/" class="menu-item">LinkedIn</a>
+        <a href="about_me/about_me.html" class="menu-item">About Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Project Grid -->
+  <main class="project-grid-main">
+    <!-- Project 1 -->
+    <div class="project-main" data-filter="all featured-project machine-learning manipulation">
+      <div class="video-container">
+        <a href="hexapod/hexapod.html">
+          <video loop muted autoplay>
+            <source src="hexapod/hexapod_cover.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
       </div>
-      <div class="link-buttons">
-        <a href="https://github.com/HarrisonBounds" class="button-link button-github" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/harrison-bounds/" class="button-link button-linkedin" target="_blank">LinkedIn</a>
-        <a href="imgs/HarrisonBoundsResume.pdf" class="button-link button-resume" target="_blank">Resume</a>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>Hexapod from Scratch</b></h2>
+        <p class="project-subtitle-main">Reinforcement Learning, IK, Legged Locomotion</p>
       </div>
-      
-      
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-main" data-filter="all featured-project cv manipulation ros">
+      <div class="video-container">
+        <a href="doodle_droid/doodle_droid.html">
+          <video loop muted autoplay>
+            <source src="doodle_droid/doodle_droid_portfolio.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
       </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>Doodle Droid</b></h2>
+        <p class="project-subtitle-main">ROS2, Computer Vision, Manipulation</p>
+      </div>
+    </div>
 
-      <div class="projects-container">
-        <h2 class="featured-title">My Projects</h2>
-
-      <div class="image-description-section">
-        
-        <div class="video-container">
-          <a href="doodle_droid.html">
-            <video class="square-video" autoplay muted loop>
-              <source src="imgs/doodle_droid_portfolio.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </a>
-          <p class="video-description">
-            <span><b>Doodle Droid</b></span><br> 
-            ROS 2, Image Processing, Computer Vision
-          </p>
-        </div>
-        
-        <!-- First row -->
-        <div class="video-container">
-          <a href="flashfire.html" target="_blank">
-          <video class="square-video" autoplay muted loop>
-            <source src="imgs/flashfire_portfolio_shortened.mp4" type="video/mp4">
+    <div class="project-main" data-filter="all featured-project machine-learning manipulation">
+      <div class="video-container">
+        <a href="dog/go2.html">
+          <video loop muted autoplay>
+            <source src="dog/go2_cover.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </a>
-          <p class="video-description">
-            <span><b>Autonomous RC Car</b></span><br> 
-            Imitation Learning, Reinforcement Learning
-          </p>
-        </div>
+      </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>Training a Robot Dog</b></h2>
+        <p class="project-subtitle-main">Reinforcement Learning, PPO, Legged Locomotion</p>
+      </div>
+    </div>
 
-        <div class="video-container">
-          <a href="https://www.spiedigitallibrary.org/journals/journal-of-electronic-imaging/volume-33/issue-5/053052/Color-quantization-using-an-accelerated-Jancey-k-means-clustering-algorithm/10.1117/1.JEI.33.5.053052.short" target="_blank">
-          <video class="square-video" autoplay muted loop>
-            <source src="imgs/jkm_cropped_portfolio.mp4" type="video/mp4">
+    <div class="project-main" data-filter="all featured-project machine-learning cv navigation">
+      <div class="video-container">
+        <a href="flashfire/flashfire.html">
+          <video loop muted autoplay>
+            <source src="flashfire/flashfire_portfolio_shortened.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </a>
-          <p class="video-description">
-            <span><b>K-Means Research</b></span><br> 
-            C++, Unsupervised Learning, Clustering Algorithms
-          </p>
-        </div>
-      
-        <!-- Second row -->
-        <div class="video-container">
-          <a href="sketch_prediction.html">
-          <video class="square-video" autoplay muted loop>
-            <source src="imgs/sketch_predictor_portfolio.mp4" type="video/mp4">
+      </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>Autonomous RC Car</b></h2>
+        <p class="project-subtitle-main">Imitation Learning, PyTorch, Perception</p>
+      </div>
+    </div>
+
+
+
+    <div class="project-main" data-filter="all featured-project ros navigation cv">
+      <div class="video-container">
+        <a href="path_planner/path_planner.html">
+          <video loop muted autoplay>
+            <source src="path_planner/pathplanner.webm" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </a>
-          <p class="video-description">
-            <span><b>Sketch Prediction</b></span><br> 
-            Convolutional Neural Network, PyTorch
-          </p>
+      </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>Interactive Path Planning</b></h2>
+        <p class="project-subtitle-main">ROS2, C++, A-Star</p>
+      </div>
+    </div>
 
-        </div>
-
-        <div class="video-container">
-          <a href="mobile_manipulation.html">
-          <video class="square-video" autoplay muted loop>
-            <source src="imgs/you_bot_portfolio_new.mp4" type="video/mp4">
+    <div class="project-main" data-filter="all featured-project machine-learning cv">
+      <div class="video-container">
+        <a href="jancey/jkm.pdf">
+          <video loop muted autoplay>
+            <source src="jancey/kmeans.webm">
             Your browser does not support the video tag.
           </video>
         </a>
-          <p class="video-description">
-            <span><b>Mobile Manipulation Simulation</b></span><br> 
-            PI Control, Coppelia Sim
-          </p>
+      </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>K-Means Research</b></h2>
+        <p class="project-subtitle-main">C++, Unsupervised Learning, Color Quantization</p>
+      </div>
+    </div>
 
-        </div>
+  </main>
 
-        <div class="video-container">
-          <a href="jack_box.html" target="_blank">
-          <video class="square-video" autoplay muted loop>
-            <source src="imgs/jack_in_the_box_portolfio_new.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-          <p class="video-description">
-            <span><b>Jack in the Box</b></span><br> 
-            Dynamics, Animation, Impacts
-          </p>
+  <!-- JavaScript for Filtering -->
+  <script src="filter.js"></script>
+</body>
 
-        </div>
-
-        <div class="video-container">
-          <a href="notes_ai.html" target="_blank">
-          <video class="square-video" autoplay muted loop>
-            <source src="imgs/notesai_cropped_portfolio.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-          <p class="video-description">
-            <span><b>NotesAI</b></span><br> 
-            Large Language Models, API, Python
-          </p>
-
-        </div>
-
-        <div class="video-container">
-          <a href="rrt.html" target="_blank">
-          <video class="square-video" autoplay muted loop>
-            <source src="imgs/rrt_portfolio_new.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-          <p class="video-description">
-            <span><b>Path Planning</b></span><br> 
-            RRT, 3D, Collision Detection
-          </p>
-
-        </div>
-
-        <div class="video-container">
-          <a href="dfs_bfs.html" target="_blank">
-          <video class="square-video" autoplay muted loop>
-            <source src="imgs/bfs_dfs_portfolio.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-          <p class="video-description">
-            <span><b>Traversal Algorithms</b></span><br> 
-            DFS, BFS
-          </p>
-
-        </div>
-
-        <div class="video-container">
-          <a href="pen_grabber.html" target="_blank">
-          <video class="square-video" autoplay muted loop>
-            <source src="imgs/pen_grabber_portfolio.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-          <p class="video-description">
-            <span><b>Pen Grabber</b></span><br> 
-            Computer Vision, Python
-          </p>
-
-        </div>
-
-    <script src="./script.js"></script>
-
-  
-
-</body></html>
+</html>
