@@ -1,103 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Autonomous RC Car</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../styles.css">
+  <!-- Load fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Neue+Montreal&family=Rhymes&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="centered-container">
-    <div class="other-container">
-      <header>
-        <h1>Flash Fire: Autonomous RC Car</h1>
-        <br>
-        <a style="color: #f39912;" href="https://github.com/HarrisonBounds/FlashFire" target="_blank" class="button-link">GitHub</a>
-        <a href="index.html" class="back-button">Back to Homepage</a>
-      </header>
 
-      <br>
-      <section>
-        <h2 style="color: #000000;">Overview</h2>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="name">Harrison Bounds</div>
+      <nav class="menu">
+        <a href="../index.html" class="menu-item">Projects</a>
+        <a href="../resume/HarrisonBoundsResume.pdf" class="menu-item">Resume</a>
+        <a href="https://github.com/HarrisonBounds" class="menu-item">GitHub</a>
+        <a href="https://www.linkedin.com/in/harrison-bounds/" class="menu-item">LinkedIn</a>
+        <a href="../about_me.html" class="menu-item">About Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Project Detail Content -->
+  <main class="project-detail">
+    <div class="container">
+      <!-- Project Title Section -->
+      <div class="project-page-header">
+        <h1 class="project-page-title">Flash Fire: Autonomous RC Car</h1>
+        <p class="project-page-subtitle">Imitation Learning, Convolutional Neural Networks, Autonomous Navigation</p>
+        <a href="https://github.com/HarrisonBounds/FlashFire" class="github-button">View on GitHub</a>
+
+        <br><br><br>
+        <h2>Overview</h2>
+
         <div class="other-video-container">
-          <video class="other-square-video" autoplay muted loop width="400" height="300">
-            <source src="imgs/flashfire_portfolio_shortened.mp4" type="video/mp4">
+          <video autoplay muted loop style="width: 500px !important; height: 300px !important;">
+            <source src="../flashfire/flashfire_portfolio_shortened.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
+          <p class="caption" style="margin-top: 10px; font-style: italic; color: gray;">Successful Autonomous Run</p>
         </div>
-        <p style="text-align:center; font-style:italic; color:gray;">Successful Autonomous Run</p>
-        <p>
-          FlashFire is a group project that successfully produced an autonomous RC Car that could navigate any course using <b>Imitation Learning</b>.
-          Imitation Learning works by having an "expert" perform the task a number of times and having the target (in this case an RC Car) learn from the expert.
-          This was achieved by creating a custom <b>Convolutional Neural Network</b> to label each image being captured during training, and assigning that image
-          a throttle value and steering value.
-        </p>
-      </section>
 
-      <br>
+        <div class="project-description">
+          <p>
+            FlashFire is a group project that successfully produced an autonomous RC Car that could navigate any course
+            using <b>Imitation Learning</b>.
+            Imitation Learning works by having an "expert" perform the task a number of times and having the target (in
+            this case an RC Car) learn from the expert.
+            This was achieved by creating a custom <b>Convolutional Neural Network</b> to label each image being
+            captured during training, and assigning that image
+            a throttle value and steering value.
+          </p>
+        </div>
 
-      <section>
-        <h2 style="color: #000000;">Hardware</h2>
-        <p>
-          The brain of this project was provided by the <b>Raspberry Pi 4</b>. Attached to the Pi was a webcam that captured 20 images per second so the 
-          network had ample training data. Along with this, a servo was attached to <b>PCA9685</b> servo driver to control the front two wheels. A motor was also 
-          attached to the PI, with everything being powered by a rechargeable LiPo battery. A custom 2-tier acrylic frame sat on top of the wheels that held all of
-          the electronics in place.
-        </p>
-      </section>
+        <br><br>
+        <h2>Hardware</h2>
 
-      <br>
+        <div class="project-description">
+          <p>
+            The brain of this project was provided by the <b>Raspberry Pi 4</b>. Attached to the Pi was a webcam that
+            captured 20 images per second so the
+            network had ample training data. Along with this, a servo was attached to <b>PCA9685</b> servo driver to
+            control the front two wheels. A motor was also
+            attached to the PI, with everything being powered by a rechargeable LiPo battery. A custom 2-tier acrylic
+            frame sat on top of the wheels that held all of
+            the electronics in place.
+          </p>
+        </div>
 
-      <section>
-        <h2 style="color: #000000;">Donkey Car</h2>
-        <p>
-          This project was built off a platform known as <b>Donkey Car</b>. <a href="https://github.com/autorope/donkeycar" target="_blank">DonkeyCar</a> is an open-source platform for building self-driving scale model cars, designed as an accessible entry point to autonomous 
-          vehicle development. It combines hardware, such as a 1/10th scale RC car, Raspberry Pi, and various sensors, with Python-based software 
-          to enable machine learning and computer vision tasks. DonkeyCar utilizes deep learning frameworks like TensorFlow and PyTorch to train models 
-          for lane following, object avoidance, and more.
-          <br>
-          <br>
-          However for this project, we deployed our own Convolutional Neural Network to fit the specific needs of this project using <b>PyTorch</b>.
-        </p>
-      </section>
+        <br><br>
+        <h2>Donkey Car</h2>
 
-      <br>
+        <div class="project-description">
+          <p>
+            This project was built off a platform known as <b>Donkey Car</b>. <a
+              href="https://github.com/autorope/donkeycar" target="_blank">DonkeyCar</a> is an open-source platform for
+            building self-driving scale model cars, designed as an accessible entry point to autonomous
+            vehicle development. It combines hardware, such as a 1/10th scale RC car, Raspberry Pi, and various sensors,
+            with Python-based software
+            to enable machine learning and computer vision tasks. DonkeyCar utilizes deep learning frameworks like
+            TensorFlow and PyTorch to train models
+            for lane following, object avoidance, and more.
+            <br><br>
+            However for this project, we deployed our own Convolutional Neural Network to fit the specific needs of this
+            project using <b>PyTorch</b>.
+          </p>
+        </div>
 
-      <section>
-        <h2 style="color: #000000;">Architecture</h2>
-        <p>
-          Flashfire's network is a CNN architecture designed for tasks involving image input, characterized by its compact 
-          and modular design. It begins with four convolutional layers that progressively reduce the spatial dimensions of the input while 
-          increasing feature depth, employing 5x5 and 3x3 kernels with strides of 2 and 1 to capture patterns at varying scales. Each convolutional 
-          layer is followed by a ReLU activation to introduce non-linearity. After the convolutional operations, the network flattens the feature 
-          maps and processes them through three fully connected layers, reducing the dimensionality step-by-step from a computed input size to 64, 
-          then 32, and finally to 2 output neurons (throttle and steering). This architecture ensures that the network is adaptable to different input sizes (defined by 
-          width and height) by dynamically calculating the fully connected input size based on convolutional layer outputs.
-        </p>
-      </section>
+        <br><br>
+        <h2>Architecture</h2>
 
-      <br>
+        <div class="project-description">
+          <p>
+            Flashfire's network is a CNN architecture designed for tasks involving image input, characterized by its
+            compact
+            and modular design. It begins with four convolutional layers that progressively reduce the spatial
+            dimensions of the input while
+            increasing feature depth, employing 5x5 and 3x3 kernels with strides of 2 and 1 to capture patterns at
+            varying scales. Each convolutional
+            layer is followed by a ReLU activation to introduce non-linearity. After the convolutional operations, the
+            network flattens the feature
+            maps and processes them through three fully connected layers, reducing the dimensionality step-by-step from
+            a computed input size to 64,
+            then 32, and finally to 2 output neurons (throttle and steering). This architecture ensures that the network
+            is adaptable to different input sizes (defined by
+            width and height) by dynamically calculating the fully connected input size based on convolutional layer
+            outputs.
+          </p>
+        </div>
 
-      <section>
-        <h2 style="color: #000000;">Results</h2>
-        <p>
-          After moving the training images from the PI to a hos computer, FlashFire is ready to be trained for an autnomous run on the course driven on.
-          Running the images through FlashFire's CNN produces a model that is used as an input to the autopilot script. The script takes an image similar to 
-          the training process, runs that image through the model, and outputs a throttle and steering value for the car.
-        </p>
-      </section>
+        <br><br>
+        <h2>Results</h2>
 
-      <br>
+        <div class="project-description">
+          <p>
+            After moving the training images from the PI to a host computer, FlashFire is ready to be trained for an
+            autonomous run on the course driven on.
+            Running the images through FlashFire's CNN produces a model that is used as an input to the autopilot
+            script. The script takes an image similar to
+            the training process, runs that image through the model, and outputs a throttle and steering value for the
+            car.
+          </p>
+        </div>
 
-      <section id="contributors">
-        <h2 style="color: #000000;">Contributors</h2>
-        <ul>
-          <li>Brandon Donaldson</li>
-          <li>Lawan</li>
-          <li><a href="https://github.com/linzhangUCA" target="_blank">Lin Zhang</a></li>
-        </ul>
-      </section>
+        <br><br>
+        <h2>Contributors</h2>
+
+        <div class="project-description">
+          <ul>
+            <li>Brandon Donaldson</li>
+            <li>Lawan</li>
+            <li><a href="https://github.com/linzhangUCA" target="_blank">Lin Zhang</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="../filter.js"></script>
 </body>
+
 </html>
