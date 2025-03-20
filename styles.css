@@ -40,27 +40,11 @@ body {
   padding-left: 1rem;
 }
 
-/* .menu {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.menu-item {
-  font-size: 1.5rem;
-  color: #666;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.menu-item:hover {
-  color: #000;
-} */
-
 /* Project Grid */
 .project-grid-main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 3 columns */
+  /* 3 columns by default */
   gap: 8rem;
   padding: 2rem;
   max-width: 2500px;
@@ -70,28 +54,21 @@ body {
 .project-main {
   display: flex;
   flex-direction: column;
-  /* Stack video and description vertically */
   gap: 0.3rem;
-  /* Space between video and description */
 }
 
 .video-container {
   width: 100%;
-  /* Make the container take up the full width of its parent */
   max-width: 2500px;
-  /* Set a maximum width for the video container */
   aspect-ratio: 10 / 12;
-  /* Change to a widescreen aspect ratio (e.g., 16:9) */
   overflow: hidden;
   margin: 0 auto;
-  /* Center the video container horizontally */
 }
 
 .video-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Ensures the GIF covers the container */
 }
 
 video {
@@ -104,46 +81,39 @@ video {
 .project-info {
   display: flex;
   flex-direction: column;
-  /* Stack children vertically */
   align-items: flex-start;
-  /* Align text to the start (left) */
   gap: 0.4rem;
-  /* Space between title and subtitle */
   color: #000;
-  /* Change text color to black */
   padding: 0.5rem 0;
-  /* Add some padding */
   font-family: 'Rhymes', serif;
-  /* Match the header font */
 }
 
 .project-title-main {
   font-size: 1.5rem;
   font-weight: 350;
   margin-bottom: 0.4rem;
-  /* Add space below the title */
 }
 
 .project-subtitle-main {
   font-size: 1.2rem;
   color: #666;
-  /* Grayed-out text */
   font-weight: 400;
-  /* Optional: Adjust font weight if needed */
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .project-grid {
+  .project-grid-main {
     grid-template-columns: repeat(2, 1fr);
     /* 2 columns on tablets */
   }
 }
 
 @media (max-width: 480px) {
-  .project-grid {
+  .project-grid-main {
     grid-template-columns: 1fr;
     /* 1 column on mobile */
+    gap: 2rem;
+    /* Reduce gap for better spacing on mobile */
   }
 }
 
@@ -151,65 +121,44 @@ video {
 .menu {
   display: flex;
   gap: 1.5rem;
-  /* Space between menu items */
   align-items: center;
-  /* Vertically center items */
 }
 
 /* Menu Items */
 .menu-item {
   font-size: 1.5rem;
-  /* Set font size */
   color: #666;
-  /* Set text color */
   text-decoration: none;
-  /* Remove underline */
   transition: color 0.3s ease;
-  /* Smooth color transition */
   padding: 0.5rem 1rem;
-  /* Add padding to match dropdown items */
   background: none;
-  /* Remove default button background */
   border: none;
-  /* Remove default button border */
   cursor: pointer;
-  /* Add pointer cursor */
   font-family: 'Neue Montreal', sans-serif;
-  /* Match font family */
 }
 
 .menu-item:hover {
   color: #000;
-  /* Change color on hover */
 }
 
 /* Dropdown Button */
 .dropdown-btn {
   font-size: 1.5rem;
-  /* Match menu item font size */
   color: #666;
-  /* Match menu item text color */
   background: none;
-  /* Remove default button background */
   border: none;
-  /* Remove default button border */
   cursor: pointer;
-  /* Add pointer cursor */
   padding: 0.5rem 1rem;
-  /* Match menu item padding */
   font-family: 'Neue Montreal', sans-serif;
-  /* Match font family */
 }
 
 .dropdown-btn:hover {
   color: #000;
-  /* Change color on hover */
 }
 
 /* Dropdown Container */
 .dropdown {
   position: relative;
-  /* Required for positioning the dropdown menu */
 }
 
 /* Dropdown Content */
@@ -220,34 +169,23 @@ video {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1;
   min-width: max-content;
-  /* Adjust width to fit content */
   white-space: nowrap;
-  /* Prevent text from wrapping */
   top: 100%;
-  /* Position dropdown below the button */
   left: 0;
-  /* Align dropdown with the button */
 }
 
 .dropdown-content a {
   display: block;
   padding: 0.5rem 1rem;
-  /* Match menu item padding */
   color: #666;
-  /* Match menu item text color */
   text-decoration: none;
-  /* Remove underline */
   font-size: 1.5rem;
-  /* Match menu item font size */
   transition: background-color 0.3s ease;
-  /* Smooth background transition */
 }
 
 .dropdown-content a:hover {
   background-color: #f9f9f9;
-  /* Change background on hover */
   color: #000;
-  /* Change text color on hover */
 }
 
 /* Show dropdown on hover */
@@ -313,37 +251,29 @@ video {
   background-color: #f9f9f9;
   font-size: 1.1rem;
   line-height: 1.8;
-  /* Increased line height for better readability */
   color: #333;
-  /* Slightly darker than black for softer contrast */
   margin-bottom: 1.5rem;
-  /* Space between paragraphs */
   padding: 2rem;
   border-radius: 10px;
 }
 
 .project-description p {
   margin-bottom: 1.5rem;
-  /* Space between paragraphs */
 }
 
 .project-description strong {
   font-weight: 600;
-  /* Bold for emphasis */
   color: #000;
-  /* Darker color for strong text */
 }
 
 .project-description a {
   color: #f39912;
-  /* Accent color for links */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .project-description a:hover {
   color: #e68a00;
-  /* Darker shade on hover */
 }
 
 /* Video and Image Containers */
@@ -360,39 +290,27 @@ video {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  /* Rounded corners for images */
 }
 
 .centered-text {
   text-align: center;
-  /* Center the text horizontally */
   max-width: 800px;
-  /* Set a maximum width for the text */
   margin: 0 auto;
-  /* Center the container horizontally */
   padding: 0 20%;
-  /* Add padding to the sides (adjust as needed) */
   font-family: 'Neue Montreal', sans-serif;
-  /* Match the font */
   line-height: 1.6;
-  /* Improve readability */
 }
 
 .contributors {
   margin-top: 3rem;
-  /* Add space above the section */
   padding: 2rem;
   background-color: #f9f9f9;
-  /* Light gray background */
   border-radius: 10px;
-  /* Rounded corners */
   text-align: center;
-  /* Center-align the content */
 }
 
 .contributors a {
   color: #f39912;
-  /* Accent color for links */
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -400,9 +318,6 @@ video {
 .image-container-custom {
   display: flex;
   justify-content: center;
-  /* Centers the items horizontally */
   align-items: center;
-  /* Centers the items vertically */
   gap: 20px;
-  /* Adds space between the images */
 }
