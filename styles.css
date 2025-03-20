@@ -87,6 +87,13 @@ body {
   /* Center the video container horizontally */
 }
 
+.video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the GIF covers the container */
+}
+
 video {
   width: 100%;
   height: 100%;
