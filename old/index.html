@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harrison's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Load fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Neue+Montreal&family=Rhymes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="name">Harrison Bounds</div>
+      <nav class="menu">
+        <div class="dropdown">
+          <button class="menu-item dropdown-btn">Projects</button>
+          <div class="dropdown-content">
+            <a href="#" data-filter="featured-project">All Projects</a>
+            <a href="#" data-filter="cv">Computer Vision</a>
+            <a href="#" data-filter="machine-learning">Machine Learning</a>
+            <a href="#" data-filter="navigation">Navigation</a>
+            <a href="#" data-filter="manipulation">Manipulation</a>
+            <a href="#" data-filter="ros">ROS</a>
+          </div>
+        </div>
+        <a href="resume/HarrisonBoundsResumeNEW.pdf" class="menu-item">Resume</a>
+        <a href="https://github.com/HarrisonBounds" class="menu-item">GitHub</a>
+        <a href="https://www.linkedin.com/in/harrison-bounds/" class="menu-item">LinkedIn</a>
+        <a href="about_me/about_me.html" class="menu-item">About Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Project Grid -->
+  <main class="project-grid-main">
+    <!-- Project 1 -->
+    <div class="project-main" data-filter="all featured-project machine-learning manipulation">
+      <div class="video-container">
+        <a href="hexapod/hexapod.html">
+          <img src="hexapod/gif/hexapod_cover2.gif">
+        </a>
+      </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>Hexapod from Scratch</b></h2>
+        <p class="project-subtitle-main">Reinforcement Learning, IK, Legged Locomotion</p>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-main" data-filter="all featured-project cv manipulation ros">
+      <div class="video-container">
+        <a href="doodle_droid/doodle_droid.html">
+          <img src="doodle_droid/gif/doodle_droid_portfolio_compressed_new.gif">
+        </a>
+      </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>Doodle Droid</b></h2>
+        <p class="project-subtitle-main">ROS2, Computer Vision, Manipulation</p>
+      </div>
+    </div>
+
+    <div class="project-main" data-filter="all featured-project machine-learning manipulation">
+      <div class="video-container">
+        <a href="dog/go2.html">
+          <img src="dog/gif/go2_cover.gif">
+        </a>
+      </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>Training a Robot Dog</b></h2>
+        <p class="project-subtitle-main">Reinforcement Learning, PPO, Legged Locomotion</p>
+      </div>
+    </div>
+
+    <div class="project-main" data-filter="all featured-project machine-learning cv navigation">
+      <div class="video-container">
+        <a href="flashfire/flashfire.html">
+          <img src="flashfire/gif/flashfire_portfolio_new.gif">
+        </a>
+      </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>Autonomous RC Car</b></h2>
+        <p class="project-subtitle-main">Imitation Learning, PyTorch, Perception</p>
+      </div>
+    </div>
+
+
+
+    <div class="project-main" data-filter="all featured-project ros navigation cv">
+      <div class="video-container">
+        <a href="path_planner/path_planner.html">
+          <img src="path_planner/gif/pathplanner.gif">
+        </a>
+      </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>Interactive Path Planning</b></h2>
+        <p class="project-subtitle-main">ROS2, C++, A-Star</p>
+      </div>
+    </div>
+
+    <div class="project-main" data-filter="all featured-project machine-learning cv">
+      <div class="video-container">
+        <a href="jancey/jkm.pdf">
+          <img src="jancey/kmeans_full_crop.gif">
+        </a>
+      </div>
+      <div class="project-info">
+        <h2 class="project-title-main"><b>K-Means Research</b></h2>
+        <p class="project-subtitle-main">C++, Unsupervised Learning, Color Quantization</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- JavaScript for Filtering -->
+  <script src="filter.js"></script>
+</body>
+
+</html>

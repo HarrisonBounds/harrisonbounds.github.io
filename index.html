@@ -1,122 +1,466 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
   <title>Harrison's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Load fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Neue+Montreal&family=Rhymes&display=swap" rel="stylesheet">
+
+  <meta name="author" content="Harrison Bounds">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="name">Harrison Bounds</div>
-      <nav class="menu">
-        <div class="dropdown">
-          <button class="menu-item dropdown-btn">Projects</button>
-          <div class="dropdown-content">
-            <a href="#" data-filter="featured-project">All Projects</a>
-            <a href="#" data-filter="cv">Computer Vision</a>
-            <a href="#" data-filter="machine-learning">Machine Learning</a>
-            <a href="#" data-filter="navigation">Navigation</a>
-            <a href="#" data-filter="manipulation">Manipulation</a>
-            <a href="#" data-filter="ros">ROS</a>
-          </div>
-        </div>
-        <a href="resume/HarrisonBoundsResumeNEW.pdf" class="menu-item">Resume</a>
-        <a href="https://github.com/HarrisonBounds" class="menu-item">GitHub</a>
-        <a href="https://www.linkedin.com/in/harrison-bounds/" class="menu-item">LinkedIn</a>
-        <a href="about_me/about_me.html" class="menu-item">About Me</a>
-      </nav>
-    </div>
-  </header>
+  <table
+    style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                  <p class="name" style="text-align: center;">
+                    Harrison Bounds
+                  </p>
+                  <p>
+                    Current <a href="https://www.mccormick.northwestern.edu/robotics/" target="_blank">Northwestern MS
+                      Robotics</a>
+                    student with a graduation date of December 2025.
+                    Received my BS in Computer Science from the <a href="https://uca.edu/" target="_blank">University of
+                      Central
+                      Arkansas</a> in 2023.
+                    <br><br>
 
-  <!-- Project Grid -->
-  <main class="project-grid-main">
-    <!-- Project 1 -->
-    <div class="project-main" data-filter="all featured-project machine-learning manipulation">
-      <div class="video-container">
-        <a href="hexapod/hexapod.html">
-          <img src="hexapod/gif/hexapod_cover2.gif">
-        </a>
-      </div>
-      <div class="project-info">
-        <h2 class="project-title-main"><b>Hexapod from Scratch</b></h2>
-        <p class="project-subtitle-main">Reinforcement Learning, IK, Legged Locomotion</p>
-      </div>
-    </div>
+                    I worked as a research assistant for one year at UCA advised by <a
+                      href="https://uca.edu/cse/facultystaff/m-emre-celebi/" target="_blank">Dr.Emre Celebi</a>.
+                    I also recently completed an internship as an autonomous robotics engineer at <a
+                      href="https://www.jlg.com/en" target="_blank">JLG</a> working with visual SLAM and navigation.
+                    <br><br>
 
-    <!-- Project 2 -->
-    <div class="project-main" data-filter="all featured-project cv manipulation ros">
-      <div class="video-container">
-        <a href="doodle_droid/doodle_droid.html">
-          <img src="doodle_droid/gif/doodle_droid_portfolio_compressed_new.gif">
-        </a>
-      </div>
-      <div class="project-info">
-        <h2 class="project-title-main"><b>Doodle Droid</b></h2>
-        <p class="project-subtitle-main">ROS2, Computer Vision, Manipulation</p>
-      </div>
-    </div>
+                    My area of interests are Reinforcement Learning and Perception which are reflected in my projects
+                    below.
+                    <br><br>
+                  </p>
+                  <p style="text-align:center">
+                    <a href="resume/Harrison_Bounds_Resume.pdf" target="_blank">Resume</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/HarrisonBounds" target="_blank">GitHub</a> &nbsp;/&nbsp;
+                    <a href="https://www.linkedin.com/in/harrison-bounds/" target="_blank">LinkedIn</a> &nbsp;&nbsp;
+                  </p>
+                </td>
+                <td style="padding:2.5%;width:37%;max-width:37%">
+                  <a href="about_me/pfp.jpg" target="_blank"><img
+                      style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo"
+                      src="about_me/pfp.jpg" class="hoverZoomLink"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <h2>Projects</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="projects-table"
+            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
 
-    <div class="project-main" data-filter="all featured-project machine-learning manipulation">
-      <div class="video-container">
-        <a href="dog/go2.html">
-          <img src="dog/gif/go2_cover.gif">
-        </a>
-      </div>
-      <div class="project-info">
-        <h2 class="project-title-main"><b>Training a Robot Dog</b></h2>
-        <p class="project-subtitle-main">Reinforcement Learning, PPO, Legged Locomotion</p>
-      </div>
-    </div>
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://www.wbcd.live/" target="_blank"> <img src='wbcd.gif' width="280" height="220"
+                      alt="Doodle Droid GIF">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://www.wbcd.live/" target="_blank"> <span class="papertitle">Bimanual Manipulation
+                      Challenge</span>
+                    <span style="color: red; font-weight: bold;">(1st place at ICRA)</span>
+                  </a>
+                  <br>
+                  <a href="https://ericlee0224.github.io/" target="_blank">Weize Li,</a>
+                  <a href="https://absrat.com/" target="_blank">Zhengxiao Han,</a>
+                  <a href="https://davidlxu.github.io/" target="_blank">Lixin Xu,</a>
+                  <b>Harrison Bounds,</b>
+                  <a href="https://davidlxu.github.io/" target="_blank">Chenrui Zhang,</a>
+                  <a href="https://scholar.google.com/citations?user=RYKMFp4AAAAJ&hl=en" target="_blank">Yifan Xu</a>
+                  <br>
+                  <br>
+                  <em><a href="https://www.wbcd.live/" target="_blank">Website</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Teleoperated and trained a ARX humanoid robot to perform three different tasks for with bimanual
+                    manipulation:
+                    Fold a table cloth, open a container, and pick and place an object. Policy was trained using ACT,
+                    and competition was organized by <a href="https://deepmind.google/" target="_blank">Google
+                      Deepmind,</a>
+                    <a href="https://rai-inst.com/" target="_blank">RAI Institute,</a> and other leading partners.
 
-    <div class="project-main" data-filter="all featured-project machine-learning cv navigation">
-      <div class="video-container">
-        <a href="flashfire/flashfire.html">
-          <img src="flashfire/gif/flashfire_portfolio_new.gif">
-        </a>
-      </div>
-      <div class="project-info">
-        <h2 class="project-title-main"><b>Autonomous RC Car</b></h2>
-        <p class="project-subtitle-main">Imitation Learning, PyTorch, Perception</p>
-      </div>
-    </div>
+                  </p>
+                </td>
+              </tr>
+
+              <tr bgcolor="#E6E6FA">
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://github.com/HarrisonBounds/Hexapod-Robot" target="_blank"> <img
+                      src='hexapod/gif/hexapod_cover2.gif' width="280" height="220" alt="Hexapod Robot GIF">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://github.com/HarrisonBounds/Hexapod-Robot" target="_blank"> <span
+                      class="papertitle">Hexapod from
+                      Scratch with RL</span>
+                  </a>
+                  <br>
+                  <b>Harrison Bounds</b>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/Hexapod-Robot" target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Designed, constructed, and trained a locomotion policy for a six-legged robot to compare learned
+                    gaits to traditional ones.
+                    Programmed a tripod gait with inverse kinematics and bezier curves, while the reinforcement learning
+                    used PPO (Proximal Policy Optimization)
+                    and the <a href="https://genesis-embodied-ai.github.io/" target="_blank">Genesis</a> Simulation
+                    platform.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://github.com/HarrisonBounds/DoodleDroid" target="_blank"> <img
+                      src='doodle_droid/gif/doodle_droid_portfolio_compressed_new.gif' width="280" height="220"
+                      alt="Doodle Droid GIF">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://github.com/HarrisonBounds/DoodleDroid" target="_blank"> <span
+                      class="papertitle">Doodle Droid</span>
+                    <span style="color: red; font-weight: bold;">(Reposted by Franka Robotics)</span>
+                  </a>
+                  <br>
+                  <a href="https://ykechriotis.github.io/" target="_blank">Yanni Kechriotis,</a>
+                  <a href="https://cappuccinopanda.github.io/website/" target="_blank">David Matthews,</a>
+                  <b>Harrison Bounds,</b>
+                  <a href="https://absrat.com/" target="_blank">Zhengxiao Han,</a>
+                  <a href="https://www.linkedin.com/in/christian-tongate-6a78301b7/" target="_blank">Christian
+                    Tongate</a>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/DoodleDroid" target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    A 7-DoF <a href="https://franka.de/" target="_blank">Franka</a> robot arm that adjusts its z-height
+                    using AprilTags,
+                    detects faces with an external camera, and generates portraits via line art.
+                    My core contribution involved leading the perception subsystem, utilizing ROS2, OpenCV, and Python
+                    to convert source images into detailed
+                    line drawings.
+                  </p>
+                </td>
+              </tr>
+
+
+              <tr bgcolor="#E6E6FA">
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://docs.google.com/presentation/d/1t-WxQv7l9nbno7PVQyR4ZqkIlAv57PJc0tnwp6PpszA/edit?usp=sharing"
+                    target="_blank">
+                    <img src='dog/gif/go2_cover.gif' width="280" height="220" alt="Robot Dog GIF">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://docs.google.com/presentation/d/1t-WxQv7l9nbno7PVQyR4ZqkIlAv57PJc0tnwp6PpszA/edit?usp=sharing"
+                    target="_blank">
+                    <span class="papertitle">Teaching an Old Dog New Tricks</span>
+                  </a>
+                  <br>
+                  <b>Harrison Bounds,</b>
+                  <a href="https://www.sharwinpatil.info/" target="_blank">Sharwin Patil,</a>
+                  <a href="https://pushkardave.com/" target="_blank">Pushkar Dave</a>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/go2RL" target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Trained a <a href="https://www.unitree.com/go2" target="_blank">Unitree Go2 robot dog</a> in <a
+                      href="https://genesis-embodied-ai.github.io/" target="_blank">Genesis</a> to perform diverse
+                    locomotion tasks,
+                    including walking, running, jumping,
+                    strafing, and stair climbing. Each specialized policy was developed using Proximal Policy
+                    Optimization (PPO) with task-specific reward
+                    functions.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://docs.google.com/presentation/d/1JYGQLtSzau5UzepLlqMGFHm6ZpPfsizCoadH8dxskqs/edit?usp=sharing"
+                    target="_blank">
+                    <img src='transformer.jpg' width="280" height="220" alt="GPT-2">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://docs.google.com/presentation/d/1JYGQLtSzau5UzepLlqMGFHm6ZpPfsizCoadH8dxskqs/edit?usp=sharing"
+                    target="_blank">
+                    <span class="papertitle">GPT-2 From Scratch</span>
+                  </a>
+                  <br>
+                  <b>Harrison Bounds,</b>
+                  *adapted from <a href="https://karpathy.ai/" target="_blank">Andrej Karpathy,</a>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/GPTClone" target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Created GPT-2's transformer from scratch adapting the source code from Andrej Karpathy's tutorials.
+                    Trained on 2 A6000 RTX GPUs
+                    with a total training time of 4 days. Evaluated results on <a
+                      href="https://rowanzellers.com/hellaswag/" target="_blank">hellaswag</a> data retrieving an
+                    accuracy that beat the
+                    original model.
+                  </p>
+                </td>
+              </tr>
+
+              <tr bgcolor="#E6E6FA">
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://docs.google.com/presentation/d/1cPTweB3ZatFRHN6Bk9UeB8evfRq9SVqEpSCG4xHd3EU/edit?usp=sharing"
+                    target="_blank">
+                    <img src='ModernGrasping.png' width="280" height="220" alt="Modern Grasping">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://docs.google.com/presentation/d/1cPTweB3ZatFRHN6Bk9UeB8evfRq9SVqEpSCG4xHd3EU/edit?usp=sharing"
+                    target="_blank">
+                    <span class="papertitle">Modern Grasping</span>
+                  </a>
+                  <br>
+                  <a href="https://absrat.com/" target="_blank">Zhengxiao Han,</a>
+                  <b>Harrison Bounds</b>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/VisualGrasp" target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Integrated a VLM (Vision-Lanugage Model) with <a href="https://segment-anything.com/"
+                      target="_blank">SAM
+                      (Segment-Anything Model)</a> to detect and mask arbitrary objects in a scene. This mask is
+                    overlayed
+                    onto the point cloud provided by a <a
+                      href="https://www.intel.com/content/www/us/en/architecture-and-technology/realsense-overview.html"
+                      target="_blank">realsense
+                      RGBD camera</a>
+                    and filters out grasping poses calculated from <a href="https://graspnet.net/"
+                      target="_blank">GraspNet</a>.
+                  </p>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://github.com/HarrisonBounds/FlashFire" target="_blank"> <img
+                      src='flashfire/gif/flashfire_portfolio_new.gif' width="280" height="220"
+                      alt="Autonomous RC Car GIF">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://github.com/HarrisonBounds/FlashFire" target="_blank"> <span
+                      class="papertitle">Autonomous RC Car</span>
+                  </a>
+                  <br>
+                  <b>Harrison Bounds,</b>
+                  <a href="https://www.linkedin.com/in/brandonudonaldson/" target="_blank">Brandon Donaldson,</a>
+                  <a href="https://www.linkedin.com/in/lawan-bachir-djibril-hamidou-372337257/" target="_blank">Lawan
+                    Hamidou,</a>
+                  <a href="https://linzhanguca.github.io/" target="_blank">Lin Zhang</a>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/FlashFire" target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Autonomous navigation system for an RC car using imitation learning built on a custom CNN
+                    (convolutional neural network).
+                  </p>
+                </td>
+              </tr>
+
+              <tr bgcolor="#E6E6FA">
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="path_planner/path_planner.html" target="_blank"> <img src='path_planner/gif/pathplanner.gif'
+                      width="280" height="220" alt="Path Planner GIF">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="path_planner/path_planner.html" target="_blank"> <span class="papertitle">Interactive Path
+                      Planning</span>
+                  </a>
+                  <br>
+                  <b>Harrison Bounds,</b>
+                  <a href="https://lbos7.github.io/" target="_blank">Logan Boswell</a>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/ros2_path_planner" target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Interactive path planning tool for navigating occupancy grids created by SLAM algorithms.
+                    Implemented the A* algorithm in C++ and integrated it with ROS2, allowing users to define start and
+                    goal points and visualize optimal paths in a simulated environment.
+                  </p>
+                </td>
+              </tr>
 
 
 
-    <div class="project-main" data-filter="all featured-project ros navigation cv">
-      <div class="video-container">
-        <a href="path_planner/path_planner.html">
-          <img src="path_planner/gif/pathplanner.gif">
-        </a>
-      </div>
-      <div class="project-info">
-        <h2 class="project-title-main"><b>Interactive Path Planning</b></h2>
-        <p class="project-subtitle-main">ROS2, C++, A-Star</p>
-      </div>
-    </div>
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://harrisonbounds.github.io/jancey/jkm.pdf" target="_blank"> <img
+                      src='jancey/kmeans_full_crop.gif' width="280" height="220" alt="K-Means GIF">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://harrisonbounds.github.io/jancey/jkm.pdf" target="_blank"> <span
+                      class="papertitle">K-Means
+                      Research</span>
+                  </a>
+                  <br>
+                  <b>Harrison Bounds,</b>
+                  <a href="https://faculty.uca.edu/ecelebi/" target="_blank">Emre Celebi,</a>
+                  <a href="https://www.linkedin.com/in/jordan-maxwell-b668621aa/" target="_blank">Jordan Maxwell</a>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/Cluster-Research-JKM" target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Implemented the Jancey K-Means algorithm in C++, comparing this lesser-known variant of K-Means to
+                    other popular widely used
+                    algorithms for clustering applications.
+                  </p>
+                </td>
+              </tr>
 
-    <div class="project-main" data-filter="all featured-project machine-learning cv">
-      <div class="video-container">
-        <a href="jancey/jkm.pdf">
-          <img src="jancey/kmeans_full_crop.gif">
-        </a>
-      </div>
-      <div class="project-info">
-        <h2 class="project-title-main"><b>K-Means Research</b></h2>
-        <p class="project-subtitle-main">C++, Unsupervised Learning, Color Quantization</p>
-      </div>
-    </div>
+              <tr bgcolor="#E6E6FA">
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://docs.google.com/presentation/d/1wgdJ8BGGiL-nZCz5TmCijaocPH0_-Bm5D7lpKj9D0js/edit?usp=sharing"
+                    target="_blank">
+                    <img src='sketch_predictor_portfolio.gif' width="280" height="220" alt="Sketch Prediction">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://docs.google.com/presentation/d/1wgdJ8BGGiL-nZCz5TmCijaocPH0_-Bm5D7lpKj9D0js/edit?usp=sharing"
+                    target="_blank">
+                    <span class="papertitle">Sketch Prediction</span>
+                  </a>
+                  <br>
+                  <b>Harrison Bounds,</b>
+                  <a href="https://www.sharwinpatil.info/" target="_blank">Sharwin Patil,</a>
+                  <a href="https://andrewkwolek.github.io/" target="_blank">Andrew Kwolek,</a>
+                  <a href="https://sayantani-bhattacharya.github.io/" target="_blank">Sayantani Bhattacharya</a>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/MSAI-349-Final-Project" target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Custom CNN (Convolutional Neural Network) that predicts a live drawing from a user over 250 unique
+                    classes.
+                  </p>
+                </td>
+              </tr>
 
-  </main>
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://github.com/HarrisonBounds/YouBot-Mobile-Simulation" target="_blank"> <img
+                      src='you_bot_portfolio_new.gif' width="280" height="220" alt="Mobile Simulation">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://github.com/HarrisonBounds/YouBot-Mobile-Simulation" target="_blank"> <span
+                      class="papertitle">Mobile
+                      Manipulation</span>
+                  </a>
+                  <br>
+                  <b>Harrison Bounds</b>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/YouBot-Mobile-Simulation"
+                      target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Simulated a mobile Kuka robot in <a href="https://www.coppeliarobotics.com/"
+                      target="_blank">Coppelia Sim</a>
+                    performing a manipulation task with a 4 DoF arm
+                    attached. Utilized trajectroy generation and PID
+                    control for smooth planning.
+                  </p>
+                </td>
+              </tr>
 
-  <!-- JavaScript for Filtering -->
-  <script src="filter.js"></script>
+              <tr bgcolor="#E6E6FA">
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <a href="https://github.com/HarrisonBounds/Dynamics-Simulation" target="_blank"> <img
+                      src='jack_in_box_portfolio.gif' width="280" height="220" alt="Path Planner GIF">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://github.com/HarrisonBounds/Dynamics-Simulation" target="_blank"> <span
+                      class="papertitle">2D Physics
+                      Simulator from
+                      Scratch</span>
+                  </a>
+                  <br>
+                  <b>Harrison Bounds</b>
+                  <br>
+                  <br>
+                  <em><a href="https://github.com/HarrisonBounds/Dynamics-Simulation" target="_blank">GitHub</a></em>
+                  <br>
+                  <p></p>
+                  <p>
+                    Simulated a jack in the box using Langragian dynamics and impact equations with Python and sympy.
+                  </p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:right;font-size:small;">
+                    Website template from <a href="https://jonbarron.info/" target="_blank">Jon Barron</a>.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 
 </html>

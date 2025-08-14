@@ -1,0 +1,223 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+.papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.name {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
+.colored-box {
+    color: black;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+/* Styles for main header links (Resume, GitHub, LinkedIn) */
+p[style*="text-align:center"] a {
+    font-size: 16px; /* Adjust this value as desired, e.g., 18px, 1.2em */
+    font-weight: bold; /* Optional: Make them bold for more prominence */
+    padding: 0 5px; /* Optional: Add a little padding around them to make clickable area slightly larger */
+}
+
+
+/* Make GitHub links bigger (for project entries) */
+.projects-table em a[href*="github.com"] {
+    font-size: 1.1em; /* Adjust this value to make the text larger or smaller */
+}
+
+/* --- Responsive Adjustments for Project Table --- */
+
+/* Ensure the main projects table takes full width */
+.projects-table {
+    width: 100%;
+    max-width: none; 
+}
+
+/* This media query applies styles only when the screen width is 768px or less. */
+@media screen and (max-width: 768px) {
+
+    /* Make each project row (tr) display as a block */
+    .projects-table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    /* Make the table cells (td) display as blocks and use flexbox for centering */
+    .projects-table td {
+        display: flex; /* Make it a flex container */
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center children horizontally along the cross-axis */
+        width: 100% !important; /* Override inline width styles */
+        padding: 8px 0; /* Adjust padding for mobile */
+        /* Temporary for debugging: */
+        /* outline: 1px dashed red; */ 
+    }
+
+    /* Target the <a> tag directly inside the image td and make it a flex item */
+    .projects-table td:first-child a { /* This targets the <a> in the first td (image td) */
+        display: flex; /* Make the link a flex container itself */
+        justify-content: center; /* Center its immediate child (the image) */
+        align-items: center; /* Center vertically if needed */
+        width: 100%; /* Ensure the link takes full width of its td parent */
+        /* Temporary for debugging: */
+        /* outline: 1px dashed blue; */
+    }
+
+    /* Specifically target the image itself */
+    .projects-table td a img {
+        width: 100% !important; 
+        height: auto !important;
+        max-width: 200px; /* Still scale down image for mobile */
+        display: block; /* Ensure it behaves as a block element */
+        margin: 0; /* Remove any potential default margins from the image */
+        padding: 0; /* Remove any potential default paddings from the image */
+        /* Temporary for debugging: */
+        /* outline: 1px dashed green; */
+    }
+
+    /* Adjust text alignment for mobile descriptions if needed */
+    .projects-table td p {
+        display: block;
+        text-align: left; /* Keep text descriptions left-aligned for readability */
+        padding: 0 10px; /* Add horizontal padding to text */
+        width: auto;
+        max-width: none;
+    }
+
+    /* Adjust title alignment */
+    .projects-table .papertitle {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust author name alignment */
+    .projects-table b {
+        display: block;
+        text-align: center;
+    }
+
+    /* Adjust the "Project / GitHub" line */
+    .projects-table em {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust spacing around links in the footer */
+    p.links a {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
