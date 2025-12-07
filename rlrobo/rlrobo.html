@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YC1EZJV3X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-9YC1EZJV3X');
+  </script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>RLROBO | Harrison Bounds</title>
+
+  <meta name="author" content="Harrison Bounds">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
+
+  <style>
+    /* Specific styles for the project page, maintaining the look */
+    .project-title {
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .project-author {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .section-content {
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    /* Styles for side-by-side images (Task Creation) */
+    .gif-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .gif-item {
+        max-width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gif-item img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .gif-item p {
+        font-size: 12px; 
+        margin-top: 10px; 
+        color: #666;
+        text-align: center;
+    }
+    
+    /* NEW: Styles for side-by-side diagrams (Results and Deployment) */
+    .dual-image-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /* Ensure the container is centered in the table cell */
+        width: 100%;
+    }
+
+    .dual-image-item {
+        width: 48%; /* Each takes slightly less than half the space */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dual-image-item img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .dual-image-item p {
+        font-size: 12px;
+        margin-top: 10px;
+        color: #666;
+        text-align: center;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <table
+    style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <p style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
+                    <a href="../index.html">← Back to Home</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/HarrisonBounds/VLM-RL" target="_blank">GitHub Repository</a> &nbsp;/&nbsp;
+                    <a href="resume/Harrison_Bounds_Resume.pdf" target="_blank">Resume</a>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; background-color: #E6E6FA;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:100%;vertical-align:middle">
+                  <p class="project-title">
+                    RLROBO: VLM Fine-Tuning with RL for Robotic Manipulation
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle; text-align: center;">
+                  
+                  <img src='rlrobo.gif' width="750" height="450" alt="RLROBO Project Demonstration"
+                    style="max-width:100%; height:auto;">
+                  <p style="font-size: 12px; margin-top: 10px; color: #666;">
+                    Demonstration of the VLM-based policy deployed on the Franka Panda arm.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <h2>Overview</h2>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:top" class="section-content">
+                  <p>
+                    Vision Language Models (VLMs) struggle with spatial reasoning tasks such as robotic manipulation due to their training on static image-text pairs. To address this, we present <b>RLROBO</b>, a framework that fine-tunes VLMs using a modified Group Relative Policy Optimization (GRPO)reinforcement learning algorithm. This pipeline is the starting point that enables the VLM to effectively interpret visual and linguistic inputs for basic robotic manipulation tasks, enhancing sample efficiency and facilitating sim-to-real transfer.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <h2>Task Creation</h2>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:top" class="section-content">
+                  <p>
+                  To understand the capabilities of the fine-tuned VLM policy, we designed a set of basic manipulation tasks that require spatial knowledge and object interaction. These tasks were inspired by <a href="https://github.com/qgallouedec/panda-gym" target="_blank">panda_gym</a> and include:
+
+                    <ul>
+                        <li><b>Reach:</b> End-Effector must simply reach the cube</li>
+                        <li><b>Pick and Place:</b> Pick up an object from a table and place it at a specified target location.</li>
+                        <li><b>Slide:</b> Slide an object from one location on the table to another specified location.</li>
+                        <li><b>Stack:</b> Pick up an object from a table and place it on top of another object.</li>
+                    </ul>
+
+                    Each of these basic tasks are the foundation for more complex manipulation tasks in future work, such as "open the drawer" or "fold the cloth", which is the reasoning behind selecting them for this initial study. 
+
+                    We utilized <a href="https://developer.nvidia.com/isaac-sim" target="_blank">Isaac Sim</a> to create a parallel simulated environment for performing the tasks and creating the reward functions.
+                  </p>
+                  
+                  <div class="gif-container">
+                    <div class="gif-item">
+                        <img src="pick_place_task-ezgif.com-video-speed(1).gif" alt="Pick Place Task Demonstration">
+                        <p>
+                            Pick Place Task Demonstration
+                        </p>
+                    </div>
+                    <div class="gif-item">
+                        <img src="stack_task-ezgif.com-video-speed(1).gif" alt="Stack Task Demonstration">
+                        <p>
+                            Stack Task Demonstration
+                        </p>
+                    </div>
+                    <div class="gif-item">
+                        <img src="slide_task_fail-ezgif.com-video-speed(1).gif" alt="Slide Task Demonstration">
+                        <p>
+                            Slide Task Demonstration
+                        </p>
+                    </div>
+                  </div>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <h2>Methodology and Architecture</h2>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 16px; width: 100%; vertical-align: top;" class="section-content">
+                <p>
+                    A modified version of <a href="https://arxiv.org/pdf/2402.03300" target="_blank">GRPO</a> (Group
+                    Relative Policy Optimization) was used to fine-tune <a
+                        href="https://huggingface.co/Qwen/Qwen2.5-3B" target="_blank">Qwen 2.5 VL 3B</a>, a pre-trained
+                    Vision Language Model. Due to initial hardware limitations, the 3B parameter model was selected to
+                    balance performance and resource requirements. GRPO leverages multiple action generations per
+                    observation, allowing it to choose the most effective action, which enhances sample efficiency during
+                    training. Since the training needed to be done online, a modification was made to the the GRPO
+                    algorithm to work in an online setting rather than the original offline setting. The process consists
+                    of a rollout portion and a training portion:
+                </p>
+            </td>
+              </tr>
+
+              <tr>
+                <td style="padding: 16px; width: 100%; vertical-align: middle; text-align: center;">
+                    <img src='VLM_RL_ARCH.png' alt="Diagram of the VLM-GRPO Architecture"
+                            style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                        <p style="font-size: 12px; margin-top: 10px; color: #666;">
+                            Diagram illustrating data collection and the modified GRPO loop.
+                        </p>
+                </td>
+               </tr>
+            </tbody>
+          </table>
+
+          
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <h2>Results and Deployment</h2>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:top" class="section-content">
+                  <p>
+                    The training is still in progress, but preliminary results indicate that the fine-tuned VLM policy is starting to learn to perform the basic manipulation tasks with increasing proficiency. Utilizing the parallel environments, data collection is quick and efficient, allowing for rapid iteration and improvement of the policy. After training is complete, we use a Franka Panda arm to deploy the policy in a real-world setting. To do this, we have to set up communication bwtween the local machine connected to the arm and the remote machine running the VLM inference:
+
+
+                  </p>
+
+                  <div class="dual-image-container">
+                    
+                    <div class="dual-image-item">
+                        <img src='reward.png' alt="Franka Panda arm setup for real-world deployment">
+                        <p>
+                            Reward curve over time
+                        </p>
+                    </div>
+
+                    <div class="dual-image-item">
+                        <img src='loss.png' alt="Franka Panda arm setup for real-world deployment">
+                        <p>
+                            Loss curve over time
+                        </p>
+                    </div>
+                    
+                  </div>
+
+                  <tr>
+                    <td style="padding: 16px; width: 100%; vertical-align: middle; text-align: center;">
+                        <img src='VLM_RL_API.png' alt="Diagram of the VLM-GRPO Architecture"
+                                style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                            <p style="font-size: 12px; margin-top: 10px; color: #666;">
+                                Diagram illustrating communication between the Franka Panda arm and the VLM inference server.
+                            </p>
+                    </td>
+                  </tr>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <h2>Conclusion and Future Work</h2>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:top" class="section-content">
+                  <p>
+                    The policy seems to be plateuing in performance, so future work will focus on hyperparameter tuning and training for an extended period to further enhance the policy's capabilities. Additionally, exploring more complex manipulation tasks and integrating additional sensory inputs to improve the policy's robustness and adaptability in dynamic environments will be considered.
+
+                    Overall, RLROBO represents a promising step towards enabling VLMs to effectively perform robotic manipulation tasks through reinforcement learning fine-tuning. Though the pipeline is complete, the training itself is ongoing and needs to be refined.
+                  </p>
+                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:right;font-size:small;">
+                    Website template from <a href="https://jonbarron.info/" target="_blank">Jon Barron</a>.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
