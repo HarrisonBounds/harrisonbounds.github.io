@@ -147,21 +147,23 @@
             </tbody>
           </table>
           
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle; text-align: center;">
-                  
-                  <img src='rlrobo.gif' width="750" height="450" alt="RLROBO Project Demonstration"
-                    style="max-width:100%; height:auto;">
-                  <p style="font-size: 12px; margin-top: 10px; color: #666;">
-                    Demonstration of the VLM-based policy deployed on the Franka Panda arm.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="dual-image-container">
+                    
+                    <div class="dual-image-item">
+                        <img src='sim2real-ezgif.com-video-speed.gif' alt="sim2real">
+                        <p>
+                            Sim2Real deployment <b>5X Speed</b>
+                        </p>
+                    </div>
+
+                    <div class="dual-image-item">
+                        <img src='GRPO_sim_eval.gif' alt="simulation inference">
+                        <p>
+                            Simulation Inference <b>5X Speed</b>
+                        </p>
+                    </div>
+                    
+          </div>
 
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -253,19 +255,26 @@
                     of a rollout portion and a training portion:
                 </p>
             </td>
-              </tr>
-
-              <tr>
-                <td style="padding: 16px; width: 100%; vertical-align: middle; text-align: center;">
-                    <img src='VLM_RL_ARCH.png' alt="Diagram of the VLM-GRPO Architecture"
-                            style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
-                        <p style="font-size: 12px; margin-top: 10px; color: #666;">
-                            Diagram illustrating data collection and the modified GRPO loop.
-                        </p>
-                </td>
-               </tr>
             </tbody>
           </table>
+
+          <div class="dual-image-container">
+                    
+                    <div class="dual-image-item">
+                        <img src='VLM_RL_ARCH.png' alt="GRPO arch">
+                        <p>
+                            Diagram displaying the rollout and training architecture
+                        </p>
+                    </div>
+
+                    <div class="dual-image-item">
+                        <img src='slide_parallel_task-ezgif.com-video-speed.gif' alt="training">
+                        <p>
+                            Training with multiple parallel environments
+                        </p>
+                    </div>
+                    
+          </div>
 
           
 
